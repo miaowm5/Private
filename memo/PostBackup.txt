@@ -1,0 +1,219 @@
+[align=center]
+[img]http://rm.66rpg.com/data/attachment/album/201409/19/232136dznnz1hz31fhfh37.png[/img]
+[table=80%,SandyBrown]
+[tr][td][align=center][font=黑体][size=4][color=#ffffff][b]◎基本信息◎[/b][/color][/size][/font][/align][/td][/tr]
+[/table][table=80%]
+[tr][td][align=center][b]    游戏制作    [/b][/align][/td][td]喵呜喵5[/td][/tr]
+[tr][td][align=center][b]游戏大小[/b][/align][/td][td]62.0M[/td][/tr]
+[tr][td][align=center][b]当前版本[/b][/align][/td][td] 2014.9.20 v0.95[/td][/tr]
+[tr][td][align=center][b]游戏类型[/b][/align][/td][td] 剧情、探索、解谜[/td][/tr]
+[tr][td][align=center][b]下载地址[/b][/align][/td][td][url=http://memo-girl.lofter.com/download]http://memo-girl.lofter.com/download[/url][/td][/tr]
+[tr][td][align=center][b]制作工具[/b][/align][/td][td] RPG Maker VX ACE
+（※ 不用安装也可以进行游戏）[/td][/tr]
+[tr][td][align=center][b] 游戏时间[/b][/align][/td][td]共7个章节（+ 1个隐藏章节），每章游戏时间约为20~40分钟
+（※ 仅供参考，实际游戏时间依照个人水平而定）[/td][/tr]
+[tr][td][align=center][b] 游戏难度[/b][/align][/td][td] 较高
+（※ 卡关时可以在本贴提问或者查看附带的提示/攻略）[/td][/tr]
+[tr][td][align=center][b]特别提示[/b][/align][/td][td]目前的版本还不够稳定，建议多多存档以免产生不必要的损失。
+任何BUG、崩溃都欢迎将报错提示截图后在本贴进行汇报。[/td][/tr]
+[/table]
+[img]http://rm.66rpg.com/data/attachment/album/201409/20/003239mh747zjfs4hs3ab7.png[/img]
+
+[table=80%,SandyBrown]
+[tr][td][align=center][font=黑体][size=4][color=#ffffff][b]◎STORY◎[/b][/color][/size][/font][/align][/td][/tr]
+[/table][table=80%]
+[tr][td][align=center]- 如同传统的解谜游戏开场那样 -[/align][align=center]- 作为主角的少女在陌生的房间中醒过来时发现自己失去了记忆 -[/align][align=center]- 房间的桌子上则留着一张写着“去寻找自己记忆吧”的纸条 -[/align][align=center]- 触碰房间中的齿轮形状硬糖时 -[/align][align=center]- 丢失的记忆真的逐渐恢复 -[/align][align=center]- 当少女还在对自己身上发生的事情感到不知所措时 -[/align][align=center]- 某个齿轮已经开始转动了…… -[/align][/td][/tr]
+[/table]
+[img]http://rm.66rpg.com/data/attachment/album/201409/20/003241sc11azw941ca33d7.png[/img]
+
+[table=80%,SandyBrown]
+[tr][td][align=center][font=黑体][size=4][color=#ffffff][b]◎人物介绍◎[/b][/color][/size][/font][/align][/td][/tr]
+[/table][table=80%]
+[tr][td][align=center][b]Memo[/b][/align][align=center][img]http://rm.66rpg.com/data/attachment/album/201409/20/094310k3ntmlnnlp8j3vnl.gif[/img][/align][/td][td]故事的主角，稍微有点天真的少女，
+不论是思考模式还是言行举止都有些笨笨的
+
+感情论者，比起去思考更喜欢用实际行动去验证，
+据说大脑散布在全身各处（笑）
+
+记忆有点差，因此想出了各种各样记忆密码的方式[/td][/tr]
+[tr][td][align=center][size=14px][b]Ego[/b][/size][/align][align=center][img=32,48]http://rm.66rpg.com/data/attachment/album/201409/20/094310u9tkpdn5d09t9k4u.gif[/img][/align][/td][td]Memo在大房子中遇到的少女，
+偶尔会流露出自大态度的理性论者，
+
+智商很高，讨厌麻烦的事情，
+更准确的说是讨厌一切体力劳动
+
+擅长思考与计算，
+但是完全不愿意帮助Memo思考遇到的谜题
+
+看起来很擅长讲相声（误）
+[/td][/tr]
+[/table]
+[img]http://rm.66rpg.com/data/attachment/album/201409/20/003245qubbgj3fcewepygm.png[/img]
+
+[table=80%,SandyBrown]
+[tr][td][align=center][font=黑体][size=4][color=#ffffff][b]◎操作说明◎[/b][/color][/size][/font][/align][/td][/tr]
+[/table][table=80%]
+[tr][td][align=center][b]方向键[/b][/align][/td][td][align=center]控制方向：人物/光标上下左右移动[/align][/td][/tr]
+[tr][td][align=center][b]Z/空格/回车[/b][/align][/td][td][align=center]确定键：调查物品/选择选项/进入下一句对话[/align][/td][/tr]
+[tr][td][align=center][b]X/Esc[/b][/align][/td][td][align=center]菜单键：人物自由移动时可以打开菜单/再按一次退出菜单[/align][/td][/tr]
+[tr][td][align=center][b]SHIFT[/b][/align][/td][td][align=center]跑步键：按住时人物的行走速度加快[/align][/td][/tr]
+[tr][td][align=center][b]Alt+回车[/b][/align][/td][td][align=center]屏幕切换键：切换全屏幕/窗口模式进行游戏[/align][/td][/tr]
+[/table]（※如果游戏一开始角色一直往某一方向走的话，请尝试按几下右侧数字小键盘2，4，6，8。）
+
+[img]http://rm.66rpg.com/data/attachment/album/201409/20/003243sbdblx3djxbrzkkj.png[/img]
+
+[table=80%,SandyBrown]
+[tr][td][align=center][font=黑体][size=4][color=#ffffff][b]◎STAFF◎[/b][/color][/size][/font][/align][/td][/tr]
+[/table][table=80%]
+[tr][td][align=center][b]游戏制作[/b][/align][/td][td]喵呜喵5[/td][/tr]
+[tr][td][align=center][b]图像素材[/b][/align][/td][td]RPG Maker VX Ace RTP
+RPG Maker XP RTP
+ここどこ
+Pack of Tilesets
+Steampunk Tiles    
+Lunarea's Blog
+COCOON
+First Seed Material(REFMAP)
+Pixiv(マカヤキ,梅助)
+びたちー素材館
+Pixbay(utehohn,geralt,stux,Nemo)
+シルエットデザイン
+Frame Design
+フリーテクスチャ素材館
+[/td][/tr]
+[tr][td][align=center][b]字体素材[/b][/align][/td][td]文泉驿
+Font Diner
+Brittney Murphy[/td][/tr]
+[tr][td][align=center][b]音乐素材[/b][/align][/td][td]魔王魂
+フリー音楽素材 H/MIX GALLERY
+フリー効果音 On-Jin ～音人～
+びたちー素材館
+TAM Music Factory
+PANICPUMPKIN
+フリー音楽素材こんとどぅふぇ
+フリーBGM 音楽素材MusMus
+Presence of Music
+ザ マッチメイカァズ[/td][/tr]
+[tr][td][align=center][b]脚本素材[/b][/align][/td][td]MOG - Simple Anti Lag (Moghunter)
+SiNova.dll RM 功能扩展 (Sion)
+分辨率修正 (wbsy8241)
+マップイベント呼び出し for VXA (半生(はんなま))
+Galv's Layer Graphics (Galv)
+阴影字 (66RPG（作者不明）)
+CP Gradient Text script (Neonblack)
+单独停止播放某个SE (Fux2)
+RMVA 反傻瓜解包器 纸老虎 (Fux2)
+RM 内存自动清理脚本（XP&VX）v 1.00 （精灵使者）
+Ingame tone editor! (Grim)
+Unable to find Skip [VX Ace] (Krosk)
+PNG 保存 (CACAO)
+脚本代码借用
+    晴兰 (66RPG)，Sion (66RPG)
+    Moghunter (Atelier-Rgss)
+特别感谢
+    taroxd，余烬之中，无脑之人，菜鸟飞呀飞，
+    泉塚四季，VIPArcher[/td][/tr]
+[/table]（※ 完整的信息请参考游戏附带的 Readme.pdf 文件）
+
+[img]http://rm.66rpg.com/data/attachment/album/201409/20/004805m97yza9ql97ynvuk.png[/img]
+
+[table=80%,SandyBrown]
+[tr][td][align=center][font=黑体][size=4][color=#ffffff][b]◎游戏提示、攻略◎[/b][/color][/size][/font][/align][/td][/tr]
+[/table][table=80%]
+[tr][td]第一章要点提示（反白）：
+[color=White][list]
+[*]在菜单中选择物品可以将物品拿在手上。
+[*]房间中最黑的地方只有触发剧情后才可以调查。
+[*]窗台上也放着齿轮糖哦。
+[*]14 = 9 + 5
+[/list][/color]第一章步骤攻略：
+[url=https://raw.githubusercontent.com/miaowm5/Private/master/memo/Chapter1Hint.txt]https://raw.githubusercontent.com/miaowm5/Private/master/memo/Chapter1Hint.txt[/url]
+[/td][/tr]
+[tr][td]第二章要点提示（反白）：
+[color=White][list]
+[*]一楼被藏起来的两个物品提示已经非常明显了。
+[*]两只小狗以及一只小狗是不同的哦。
+[*]除了厨房以外，时钟还在什么地方出现过呢？
+[*]除了厨房的门以外，还有什么东西是因为被卡住而无法打开的呢？
+[/list][/color]第二章步骤攻略：
+[url=https://raw.githubusercontent.com/miaowm5/Private/master/memo/Chapter2Hint.txt]https://raw.githubusercontent.com/miaowm5/Private/master/memo/Chapter2Hint.txt[/url]
+[/td][/tr]
+[tr][td]第三章要点提示（反白）：
+[color=White][list]
+[*]先从打开Ego房间的另一扇门开始吧。
+[*]按照记忆规规矩矩的在厨房调查可疑的地方吧。
+[*]密码被写在了厨房的另一侧。
+[*]虽然有提示，但是花园里的东西有点不容易看清哦。
+[*]只有自己用的上的钥匙，会是哪个房间的呢？
+[*]是不是感觉座钟的台词有点熟悉，之前第一章时是如何解谜的？
+[*]Ego的房间的时钟要波动到哪个时间呢？
+[/list][/color]第三章步骤攻略：
+[url=https://raw.githubusercontent.com/miaowm5/Private/master/memo/Chapter3Hint.txt]https://raw.githubusercontent.com/miaowm5/Private/master/memo/Chapter3Hint.txt[/url]
+[/td][/tr]
+[tr][td]第四章要点提示（反白）：
+[color=White][list]
+[*]褐色的钥匙能够打开二楼的柜子。
+[*]把硬糖盒子拿给Ego看看吧。
+[*]记忆中Memo将记忆放到什么地方了呢？
+[*]无法理解那串暗号的意思的话，去看看落在地上的报纸吧。
+[*]既没有钥匙孔又没有挂锁的房间的房门应该如何打开呢？
+[/list][/color]第四章步骤攻略：
+[url=https://raw.githubusercontent.com/miaowm5/Private/master/memo/Chapter4Hint.txt]https://raw.githubusercontent.com/miaowm5/Private/master/memo/Chapter4Hint.txt[/url]
+[/td][/tr]
+[tr][td]第五章要点提示（反白）：
+[color=White][list]
+[*]先从找到需要插入书本的书架在哪个房间开始吧。
+[*]M横过来看就是3了。
+[*]M在单词表中的顺序则是13。
+[*]在客厅写着无法理解文字的柜子有人能翻译了哦。
+[*]并不会真的让你分解质因数，答案就藏在某个草稿上。
+[*]虽然有点丢脸，不过因为Memo是笨蛋所以有时候不得不遵照Ego的指示才能有所突破。
+[*]要收集的书总共有四本。
+[*]藏在书架上的法语单词是不是在哪里见过呢？
+[*]将那份温柔的记忆传达给Ego吧。
+[/list][/color]第五章步骤攻略：
+[url=https://raw.githubusercontent.com/miaowm5/Private/master/memo/Chapter5Hint.txt]https://raw.githubusercontent.com/miaowm5/Private/master/memo/Chapter5Hint.txt[/url]
+[/td][/tr]
+[tr][td]第六章要点提示（反白）：
+[color=White][list]
+[*]厨房里的猫咪先生比往常都要安分呢……
+[*]因为猫咪先生不是机器人，所以将它塞到奇怪的机器中是不对的！
+[*]推箱子可以按确定键重置箱子，所以请自由的尝试。
+[*]客厅里有什么可以用来装水的容器呢？
+[*]五边形符号之前在什么地方见过呢？
+[*]某个地方的暖炉已经打开了。
+[*]将所有未打开的柜子一并打开，收集全部的线索吧。
+[*]与密码有关的最重要的线索早在第三章时就已经获得了。
+[/list][/color]第六章步骤攻略：
+[url=https://raw.githubusercontent.com/miaowm5/Private/master/memo/Chapter6Hint.txt]https://raw.githubusercontent.com/miaowm5/Private/master/memo/Chapter6Hint.txt[/url]
+[/td][/tr]
+[/table]
+[img]http://rm.66rpg.com/data/attachment/album/201409/20/003248yle6rhmkx1e21cll.png[/img]
+
+[table=80%,SandyBrown]
+[tr][td][align=center][font=黑体][size=4][color=#ffffff][b]◎发布感言◎[/b][/color][/size][/font][/align][/td][/tr]
+[/table][table=80%]
+[tr][td] [s]（谜之声：有时间写发布感言还不快把可能引起BUG的代码全部修正了？）
+大四了，不知道这游戏毕业后能不能用来当简历什么的
+来6R这些年，我学会了如何编辑游戏发布帖……
+修BUG忙死了，游戏时间长了测试好麻烦……[/s][/td][/tr]
+[/table]
+[img]http://rm.66rpg.com/data/attachment/album/201409/20/003247l2ucy22obzykcrrr.png[/img]
+
+[table=80%,SandyBrown]
+[tr][td][align=center][font=黑体][size=4][color=#ffffff][b]◎游戏应援◎[/b][/color][/size][/font][/align][/td][/tr]
+[/table][table=80%]
+[tr][td][align=center][b][size=3]QQ表情[/size][/b][/align][/td][/tr]
+[tr][td][align=center]链接: [url=http://pan.baidu.com/s/1c0ndHZE]http://pan.baidu.com/s/1c0ndHZE[/url] [/align][align=center]密码: dm3v[/align][/td][/tr]
+[tr][td][align=center][b][size=3]应援签名[/size][/b][/align][/td][/tr]
+[tr][td][align=center][url=http://memo-girl.lofter.com/postlink][img]http://ww1.sinaimg.cn/large/685fd051gw1ekiadh85i8j208w02gt8u.jpg[/img][/url][/align][/td][/tr]
+[tr][td][code][url=http://memo-girl.lofter.com/postlink][img]http://ww1.sinaimg.cn/large/685fd051gw1ekiadh85i8j208w02gt8u.jpg[/img][/url][/code][/td][/tr]
+[tr][td][align=center][url=http://memo-girl.lofter.com/postlink][img]http://ww3.sinaimg.cn/large/685fd051gw1ekiae73jjcj208w02g74e.jpg[/img][/url][/align][/td][/tr]
+[tr][td][code][url=http://memo-girl.lofter.com/postlink][img]http://ww3.sinaimg.cn/large/685fd051gw1ekiae73jjcj208w02g74e.jpg[/img][/url][/code][/td][/tr]
+[tr][td][align=center][url=http://memo-girl.lofter.com/postlink][img]http://ww1.sinaimg.cn/large/685fd051gw1ekibs8g04rj209s05kmxp.jpg[/img][/url][/align][/td][/tr]
+[tr][td][code][url=http://memo-girl.lofter.com/postlink][img]http://ww1.sinaimg.cn/large/685fd051gw1ekibs8g04rj209s05kmxp.jpg[/img][/url][/code][/td][/tr]
+[/table]
+[img]http://rm.66rpg.com/data/attachment/album/201409/20/003246qj3cw1gkzk319mcl.png[/img]
+
+
+[/align]
