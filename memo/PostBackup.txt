@@ -4,8 +4,8 @@
 [tr][td][align=center][font=黑体][size=4][color=#ffffff][b]◎基本信息◎[/b][/color][/size][/font][/align][/td][/tr]
 [/table][table=80%]
 [tr][td][align=center][b]    游戏制作    [/b][/align][/td][td]喵呜喵5[/td][/tr]
-[tr][td][align=center][b]游戏大小[/b][/align][/td][td]62.0M[/td][/tr]
-[tr][td][align=center][b]当前版本[/b][/align][/td][td] 2014.9.20 v0.95[/td][/tr]
+[tr][td][align=center][b]游戏大小[/b][/align][/td][td]62M[/td][/tr]
+[tr][td][align=center][b]当前版本[/b][/align][/td][td] 2014.9.30 v1.00[/td][/tr]
 [tr][td][align=center][b]游戏类型[/b][/align][/td][td] 剧情、探索、解谜[/td][/tr]
 [tr][td][align=center][b]下载地址[/b][/align][/td][td][url=http://memo-girl.lofter.com/download]http://memo-girl.lofter.com/download[/url][/td][/tr]
 [tr][td][align=center][b]制作工具[/b][/align][/td][td] RPG Maker VX ACE
@@ -14,8 +14,9 @@
 （※ 仅供参考，实际游戏时间依照个人水平而定）[/td][/tr]
 [tr][td][align=center][b] 游戏难度[/b][/align][/td][td] 较高
 （※ 卡关时可以在本贴提问或者查看附带的提示/攻略）[/td][/tr]
-[tr][td][align=center][b]特别提示[/b][/align][/td][td]目前的版本还不够稳定，建议多多存档以免产生不必要的损失。
-任何BUG、崩溃都欢迎将报错提示截图后在本贴进行汇报。[/td][/tr]
+[tr][td][align=center][b]特别提示[/b][/align][/td][td]由于未知的原因游戏可能突然退出[size=14px]（……），建议增加存档的频率。[/size]
+任何BUG都欢迎在本贴进行汇报。
+对不起我语文不过关，可以的话请把我[size=14px]所有“的地得”[/size][size=14px]用错的地方告诉我……[/size][/td][/tr]
 [/table]
 [img]http://rm.66rpg.com/data/attachment/album/201409/20/003239mh747zjfs4hs3ab7.png[/img]
 
@@ -57,8 +58,8 @@
 [tr][td][align=center][b]Z/空格/回车[/b][/align][/td][td][align=center]确定键：调查物品/选择选项/进入下一句对话[/align][/td][/tr]
 [tr][td][align=center][b]X/Esc[/b][/align][/td][td][align=center]菜单键：人物自由移动时可以打开菜单/再按一次退出菜单[/align][/td][/tr]
 [tr][td][align=center][b]SHIFT[/b][/align][/td][td][align=center]跑步键：按住时人物的行走速度加快[/align][/td][/tr]
-[tr][td][align=center][b]Alt+回车[/b][/align][/td][td][align=center]屏幕切换键：切换全屏幕/窗口模式进行游戏[/align][/td][/tr]
 [/table]（※如果游戏一开始角色一直往某一方向走的话，请尝试按几下右侧数字小键盘2，4，6，8。）
+（※如果游戏没有声音的话，请尝试在游戏运行中按F1检查有没有将声音关掉了。）
 
 [img]http://rm.66rpg.com/data/attachment/album/201409/20/003243sbdblx3djxbrzkkj.png[/img]
 
@@ -95,7 +96,6 @@ PANICPUMPKIN
 Presence of Music
 ザ マッチメイカァズ[/td][/tr]
 [tr][td][align=center][b]脚本素材[/b][/align][/td][td]MOG - Simple Anti Lag (Moghunter)
-SiNova.dll RM 功能扩展 (Sion)
 分辨率修正 (wbsy8241)
 マップイベント呼び出し for VXA (半生(はんなま))
 Galv's Layer Graphics (Galv)
@@ -106,12 +106,16 @@ RMVA 反傻瓜解包器 纸老虎 (Fux2)
 RM 内存自动清理脚本（XP&VX）v 1.00 （精灵使者）
 Ingame tone editor! (Grim)
 Unable to find Skip [VX Ace] (Krosk)
-PNG 保存 (CACAO)
+PNG 保存 (CACAO) 
+真·后台运行 (紫苏)
+Fullscreen++ v2.1 (Zeus81)
+追踪未释放的对象 (taroxd)
 脚本代码借用
     晴兰 (66RPG)，Sion (66RPG)
     Moghunter (Atelier-Rgss)
+    Cybersam
 特别感谢
-    taroxd，余烬之中，无脑之人，菜鸟飞呀飞，
+    余烬之中，无脑之人，菜鸟飞呀飞，
     泉塚四季，VIPArcher[/td][/tr]
 [/table]（※ 完整的信息请参考游戏附带的 Readme.pdf 文件）
 
@@ -146,7 +150,7 @@ PNG 保存 (CACAO)
 [*]虽然有提示，但是花园里的东西有点不容易看清哦。
 [*]只有自己用的上的钥匙，会是哪个房间的呢？
 [*]是不是感觉座钟的台词有点熟悉，之前第一章时是如何解谜的？
-[*]Ego的房间的时钟要波动到哪个时间呢？
+[*]Ego的房间的时钟要拨动到哪个时间呢？
 [/list][/color]第三章步骤攻略：
 [url=https://raw.githubusercontent.com/miaowm5/Private/master/memo/Chapter3Hint.txt]https://raw.githubusercontent.com/miaowm5/Private/master/memo/Chapter3Hint.txt[/url]
 [/td][/tr]
