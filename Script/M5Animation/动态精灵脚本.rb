@@ -52,7 +52,7 @@ class Easing
     origin, target, time, ext = @data
     return @result = Array.new(time) if origin == target
     amount = ( target - origin ) / time.to_f
-    time.times { |i| @result << ( origin + amount * (i + 1) ).to_i }
+    time.times { |t| @result << ( origin + amount * (t + 1) ).to_i }
   end
   #--------------------------------------------------------------------------
   # ● 获取时间
