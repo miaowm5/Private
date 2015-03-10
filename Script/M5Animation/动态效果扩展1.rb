@@ -10,6 +10,9 @@
 
 module M5Script; module M5AnimationCore
 class Easing
+  #--------------------------------------------------------------------------
+  # ● bounce 回弹特效
+  #--------------------------------------------------------------------------
   def bounce
     b, target, time, ext = @data
     return @result = Array.new(time) if b == target
@@ -24,6 +27,9 @@ class Easing
       @result << ( c * ( 7.5625 * t * t + a ) + b ).to_i
     end
   end
+  #--------------------------------------------------------------------------
+  # ● sinin 正弦加速
+  #--------------------------------------------------------------------------
   def sinin
     b, target, time, ext = @data
     return @result = Array.new(time) if b == target
@@ -33,6 +39,9 @@ class Easing
       @result << (-c * Math.cos(t/d * (Math::PI/2)) + c + b).to_i
     end
   end
+  #--------------------------------------------------------------------------
+  # ● sinout 正弦减速
+  #--------------------------------------------------------------------------
   def sinout
     b, target, time, ext = @data
     return @result = Array.new(time) if b == target
@@ -42,6 +51,9 @@ class Easing
       @result << (c * Math.sin(t/d * (Math::PI/2)) + b).to_i
     end
   end
+  #--------------------------------------------------------------------------
+  # ● sininout 正弦缓动
+  #--------------------------------------------------------------------------
   def sininout
     b, target, time, ext = @data
     return @result = Array.new(time) if b == target
@@ -51,6 +63,9 @@ class Easing
       @result << (-c/2 * (Math.cos(Math::PI*t/d) - 1) + b).to_i
     end
   end
+  #--------------------------------------------------------------------------
+  # ● backin 弹簧停止
+  #--------------------------------------------------------------------------
   def backin
     b, target, time, ext = @data
     return @result = Array.new(time) if b == target
@@ -60,6 +75,9 @@ class Easing
       @result << (c*t*t*((s+1)*t - s) + b).to_i
     end
   end
+  #--------------------------------------------------------------------------
+  # ● backout 弹簧开始
+  #--------------------------------------------------------------------------
   def backout
     b, target, time, ext = @data
     return @result = Array.new(time) if b == target
@@ -69,6 +87,9 @@ class Easing
       @result << (c*(t*t*((s+1)*t + s) + 1) + b).to_i
     end
   end
+  #--------------------------------------------------------------------------
+  # ● backinout 弹簧移动
+  #--------------------------------------------------------------------------
   def backinout
     b, target, time, ext = @data
     return @result = Array.new(time) if b == target
