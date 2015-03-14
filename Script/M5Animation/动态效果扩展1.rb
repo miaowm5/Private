@@ -64,19 +64,19 @@ class Easing
     end
   end
   #--------------------------------------------------------------------------
-  # ● backin 弹簧停止
+  # ● backin 弹簧开始
   #--------------------------------------------------------------------------
   def backin
     b, target, time, ext = @data
     return @result = Array.new(time) if b == target
     c = target - b; d = time.to_f
     time.times do |t|
-      t += 1; t /= d; s = 1.70158
-      @result << (c*t*t*((s+1)*t - s) + b).to_i
+      t += 1; t = t / d; s = 1.70158
+      @result << (c*t*t*((s+1)*t - s) + b + 1).to_i
     end
   end
   #--------------------------------------------------------------------------
-  # ● backout 弹簧开始
+  # ● backout 弹簧停止
   #--------------------------------------------------------------------------
   def backout
     b, target, time, ext = @data
