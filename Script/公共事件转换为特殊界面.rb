@@ -28,7 +28,7 @@
       跳转到对应界面，按取消键将返回本界面之前的界面
 
 =end
-$m5script ||= {};$m5script[:M5CES20141001] = 20150226
+$m5script ||= {};$m5script[:M5CES20141001] = 20150901
 module M5CES20141001
   MENU = [
 #==============================================================================
@@ -58,21 +58,21 @@ module M5CES20141001
 #  设定结束
 #==============================================================================
   def self.call(id = 1)
-    SceneManager.call(Scene_M5CES20141001)
+    SceneManager.call(Scene)
     SceneManager.scene.prepare(id)
     wait_for_input
   end
   def self.jump(id = 1)
-    if SceneManager.scene_is?(Scene_M5CES20141001)
+    if SceneManager.scene_is?(Scene)
       bgm = SceneManager.scene.bgm
       bgs = SceneManager.scene.bgs
     end
-    SceneManager.goto(Scene_M5CES20141001)
+    SceneManager.goto(Scene)
     SceneManager.scene.prepare(id,bgm,bgs)
     wait_for_input
   end
   def self.refresh
-    return unless SceneManager.scene_is?(Scene_M5CES20141001)
+    return unless SceneManager.scene_is?(Scene)
     id = SceneManager.scene.ev
     jump(id)
   end
@@ -84,9 +84,10 @@ module M5CES20141001
   end
 end # module M5CES20141001
 module M5CES20141001
-
+#--------------------------------------------------------------------------
+# ● Window_Method
+#--------------------------------------------------------------------------
 module Window_Method
-
   def set_window(setting)
     self.x,self.y = c2number(setting[:X],0), c2number(setting[:Y],0)
     self.windowskin = Cache.system(setting[:Skin]) if setting[:Skin]
@@ -111,11 +112,14 @@ end
 
 end # module M5CES20141001
 module M5CES20141001
-
+#--------------------------------------------------------------------------
+# ● Load
+#--------------------------------------------------------------------------
 class Load < Game_Interpreter
   def clear
     super
     @open = []
+    @after_open = []
     @input_list = {}
     @setting_list = {}
     @command = []
@@ -126,7 +130,7 @@ class Load < Game_Interpreter
   def setup(list)
     m5_ces_setup1(list, 0)
     update while running?
-    return @open,@command,@input_list,@end,@setting_list
+    return @open,@after_open,@command,@input_list,@end,@setting_list
   end
   def setup2(list)
     m5_ces_setup1(list, 0)
@@ -183,6 +187,11 @@ class Load < Game_Interpreter
               when 17 then :L ;    when 18 then :R
               end
       @input_list[input] = jump_to_next("this_event.indent > @indent")
+      @index -= 1
+      jump_to_next("this_event.indent > @indent && this_event.code != 412")
+    elsif command.code == 111 && @params == [2,"A",0]
+      command_list = []
+      @after_open = jump_to_next("this_event.indent > @indent")
       @index -= 1
       jump_to_next("this_event.indent > @indent && this_event.code != 412")
     elsif command.code == 111
@@ -263,6 +272,7 @@ class Load < Game_Interpreter
     %w[Horz 横向光标 横向按键 横向],
     %w[Select 默认选择 选择],
     %w[AutoUpdate 自动更新 自动选择],
+    %w[NoUpdate 初次例外],
 
     %w[Background 背景],
   ]
@@ -271,7 +281,9 @@ end
 
 end # module M5CES20141001
 module M5CES20141001
-
+#--------------------------------------------------------------------------
+# ● Screen & Picture
+#--------------------------------------------------------------------------
 class Game_NewScreen < Game_Screen
   def initialize
     super
@@ -290,10 +302,12 @@ end
 
 end # module M5CES20141001
 module M5CES20141001
-
+#--------------------------------------------------------------------------
+# ● Interpreter
+#--------------------------------------------------------------------------
 class Interpreter < Game_Interpreter
-  def initialize(scene)
-    super(0)
+  def initialize(scene,depth = 0)
+    super(depth)
     @scene = scene
   end
   def setup(list, flag = :normal)
@@ -303,9 +317,10 @@ class Interpreter < Game_Interpreter
     update while running?
   end
   def wait(duration)
+    return if @flag == :open
     duration.times do
       Graphics.update
-      @scene.update
+      @scene.update_for_wait
     end
   end
   def screen
@@ -343,11 +358,18 @@ class Interpreter < Game_Interpreter
   end
   alias m5_20150202_command_244 command_244
   def command_244
-    return m5_20150202_command_244 if @flag == :normal
+    return m5_20150202_command_244 unless @flag == :end
     @scene.bgm.play
     @scene.bgs.play
   end
-
+  def command_117
+    common_event = $data_common_events[@params[0]]
+    if common_event
+      child = Interpreter.new(@scene, @depth + 1)
+      child.setup(common_event.list, 0)
+      child.run
+    end
+  end
 end
 
 end # module M5CES20141001
@@ -432,9 +454,7 @@ module M5CES20141001
 # ● Window_NewCommand
 #--------------------------------------------------------------------------
 class Window_NewCommand < Window_Command
-
   include Window_Method
-
   def initialize(setting,command,scene)
     @scene = scene
     @command = M5CES20141001::Load.new.setup2(command)
@@ -443,8 +463,10 @@ class Window_NewCommand < Window_Command
     super(0, 0)
     set_window(@setting)
     refresh
-    @load_over = true
+    @load_over = true unless @setting[:NoUpdate]
+    @index = -1
     load_setting
+    @load_over = true
   end
   def window_height
     [super,Graphics.height].min
@@ -463,12 +485,12 @@ class Window_NewCommand < Window_Command
     end
   end
   def select(index)
-    return unless @load_over
     return if @index == index
     super(index)
+    return unless @load_over
     return unless @command[@index]
-    @scene.interpre.setup(@command[@index][1]) if @setting[:AutoUpdate]
     @scene.interpre.setup(@command[@index][2])
+    @scene.interpre.setup(@command[@index][1]) if @setting[:AutoUpdate]
   end
   def process_ok
     return unless @command[@index]
@@ -505,16 +527,15 @@ class Window_NewCommand < Window_Command
 end
 
 end # module M5CES20141001
+module M5CES20141001
 #--------------------------------------------------------------------------
 # ● Scene_M5CES20141001
 #--------------------------------------------------------------------------
-class Scene_M5CES20141001 < Scene_Base
-
+class Scene < Scene_Base
   attr_reader :ev,:bgm,:bgs
   attr_reader :interpre
   attr_reader :info_windows,:command_window
   attr_reader :picture_sprites,:background_plane,:screen
-
   def prepare(id,bgm = nil,bgs = nil)
     @ev = id
     @bgm = bgm
@@ -525,49 +546,53 @@ class Scene_M5CES20141001 < Scene_Base
     @bgm ||= RPG::BGM.last
     @bgs ||= RPG::BGS.last
     load_events(@ev)
-    @interpre = M5CES20141001::Interpreter.new(self)
+    @interpre = Interpreter.new(self)
     create_background
     creat_sprites
     creat_windows
-    @interpre.setup(@open)
+    @interpre.setup(@open,:open)
     creat_command
+    update
+  end
+  def post_start
+    super
+    @interpre.setup(@after_open)
     update
   end
   def load_events(id)
     ev = $data_common_events[id]
     raise "公共事件读取失败！" unless ev
     ev_list = ev.list.clone
-    load = M5CES20141001::Load.new
-    @open,@command,@input,@end,@setting = load.setup(ev_list)
+    load = Load.new
+    @open, @after_open, @command, @input, @end, @setting = load.setup(ev_list)
     @setting[:Scene] ||= {}
   end
   def creat_windows
     @setting[:Info2] ||= {}
     @info_windows = Array.new(8) do |i|
-      name = ("Info#{i+1}").to_sym
-      if @setting[name]
-        M5CES20141001::Window_Content.new(@setting[:Info],@setting[name],i)
-      else
-        nil
-      end
+      set = @setting[ ("Info#{i+1}").to_sym ]
+      set ? Window_Content.new(@setting[:Info], set, i) : nil
     end
   end
   def creat_command
-    @command_window = M5CES20141001::Window_NewCommand.new(@setting[:Command],
-      @command,self)
+    @command_window = Window_NewCommand.new(@setting[:Command], @command, self)
   end
   def creat_sprites
     @picture_sprites = []
-    @background_plane = M5CES20141001::Plane_Background.new
+    @background_plane = Plane_Background.new
     if name = @setting[:Scene][:Background]
       @background_plane.bitmap = Cache.picture(name)
     end
-    @screen = M5CES20141001::Game_NewScreen.new
+    @screen = Game_NewScreen.new
   end
   def create_background
     @background_sprite = Sprite.new
     @background_sprite.bitmap = SceneManager.background_bitmap
     @background_sprite.color.set(16, 16, 16, 128)
+  end
+  def update_for_wait
+    update_graphics
+    Graphics.update
   end
   def update
     super
@@ -578,7 +603,7 @@ class Scene_M5CES20141001 < Scene_Base
     @background_plane.update
     @screen.update
     @screen.pictures.each do |pic|
-      @picture_sprites[pic.number] ||= M5CES20141001::Sprite_NewPicture.new(nil, pic)
+      @picture_sprites[pic.number] ||= Sprite_NewPicture.new(nil, pic)
       @picture_sprites[pic.number].update
     end
   end
@@ -612,6 +637,7 @@ class Scene_M5CES20141001 < Scene_Base
   def 切换界面(id); M5CES20141001.jump(id); end
   def 打开界面(id); M5CES20141001.call(id); end
 end
+end # module M5CES20141001
 #--------------------------------------------------------------------------
 # ● Window_MenuCommand
 #--------------------------------------------------------------------------
