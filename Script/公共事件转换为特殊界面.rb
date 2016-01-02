@@ -28,7 +28,7 @@
       跳转到对应界面，按取消键将返回本界面之前的界面
 
 =end
-$m5script ||= {};$m5script[:M5CES20141001] = 20150901
+$m5script ||= {};$m5script[:M5CES20141001] = 20160102
 module M5CES20141001
   MENU = [
 #==============================================================================
@@ -323,6 +323,10 @@ class Interpreter < Game_Interpreter
       @scene.update_for_wait
     end
   end
+  def map_interpreter
+    SceneManager.goto(Scene_Map)
+    $game_map.interpreter.setup(@list[@index, @list.length])
+  end
   def screen
     @scene.screen
   end
@@ -368,6 +372,11 @@ class Interpreter < Game_Interpreter
       child = Interpreter.new(@scene, @depth + 1)
       child.setup(common_event.list, 0)
       child.run
+    end
+  end
+  [201,205,212,213,217].each do |m|
+    define_method "command_#{m}".to_sym do
+      map_interpreter
     end
   end
 end
